@@ -56,7 +56,7 @@ Key elements include:
 - **NavbarCollapse**: Ensures proper navigation and UI collapse functionality on smaller screens.
 
 ```jsx
-//Navbar.jsx
+//Navbar1.jsx
 import {
   Avatar,
   Dropdown,
