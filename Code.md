@@ -968,7 +968,7 @@ The `ContactForm` component allows users to reach out with inquiries or question
 The following is the implementation of the `ContactForm` component in React:
 
 ```jsx
-//ContactForm
+//ContactForm.jsx
 "use client"; // Indicates this file uses client-side rendering
 import { Envelope, PaperPlane, User } from "phosphor-react"; // Importing icons from Phosphor
 import {
