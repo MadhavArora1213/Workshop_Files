@@ -74,13 +74,12 @@ import {
   AvatarImage,
 } from "keep-react";
 
+import profile from "../images/Profile.jpeg";
+import logo from "../images/Html.png";
 // The Navbar1 component sets up the navigation bar, with a logo and navigation links
 // Dropdown Avatar is used to show profile options for smaller screens.
 
-export const Navbar1 = ({
-  profile = "/src/images/Profile.jpeg",
-  logo = "/src/images/Html.png",
-}) => {
+export const Navbar1 = () => {
   return (
     <Navbar className="px-5 bg-gradient-to-t from-black to-gray-600">
       {/* Navbar container for logo and navigation */}
@@ -272,8 +271,9 @@ The `PortfolioImage` component is designed to display a circular portfolio image
 ```jsx
 //PortfolioImage.jsx
 import React from "react"; // Importing React library to create the component
+import image from '../images/portfolio.webp';
 
-const PortfolioImage = ({ image = "/src/images/portfolio.webp" }) => {
+const PortfolioImage = () => {
   return (
     // Container for the image with flexbox and rounded shape
     <div className="rounded-full flex justify-center items-center max-w-full">
@@ -468,12 +468,12 @@ import {
   CardHeader,
   CardTitle,
 } from "keep-react"; // Importing Card components from the keep-react library
-
+import images from "../images/Html.png"
 // Defining the Card2 component with destructured props for title, description, and image
 export const Card2 = ({
   description = "Description", // Default description
   title = "Title", // Default title
-  image = "src/images/Html.png", // Default image source
+  image = {images}, // Default image source
   ...props // Rest of the props
 }) => {
   return (
@@ -646,6 +646,14 @@ import { RxVercelLogo } from "react-icons/rx"; // Importing Vercel logo
 import "react"; // Importing React (though not explicitly needed)
 import { Card1 } from "./Card1"; // Importing Card1 component
 import { Card2 } from "./Card2"; // Importing Card2 component
+import Html from "../images/Html.png"
+import CSS from "../images/CSS.png"
+import JS from "../images/Javascript.png"
+import Node from "../images/Nodejs.png"
+import React from "../images/React.png"
+import Python from "../images/Python.png"
+import SQL from "../images/SQL.png"
+import Cpp from "../images/C++.png"
 
 // Defining the Skills component
 export const Skills = () => {
@@ -656,41 +664,42 @@ export const Skills = () => {
         <Card2
           title="HTML"
           description="Projects Done using HTML and foundational web technologies."
+          image ={Html}
         />
         <Card2
           title="CSS"
           description="Projects showcasing advanced layouts and responsive designs using CSS."
-          image="src/images/CSS.png"
+          image={CSS}
         />
         <Card2
           title="JavaScript"
           description="Interactive and dynamic web projects built using vanilla JavaScript."
-          image="src/images/JavaScript.png"
+          image={JS}
         />
         <Card2
           title="Node.js"
           description="Server-side applications built using Node.js and JavaScript."
-          image="src/images/Nodejs.png"
+         image={Node}
         />
         <Card2
           title="React.js"
           description="Front-end applications created with React, focusing on UI components and state management."
-          image="src/images/React.png"
+          image={React}
         />
         <Card2
           title="Python"
           description="Scripts and web applications built with Python, including automation and data processing."
-          image="src/images/Python.png"
+          image={Python}
         />
         <Card2
           title="SQL"
           description="Database management and query operations using SQL for efficient data storage."
-          image="src/images/SQL.png"
+          image={SQL}
         />
         <Card2
           title="C++"
           description="High-performance applications and system-level programming done with C++."
-          image="src/images/C++.png"
+          image={Cpp}
         />
       </div>
       {/* Top Section End */}
@@ -768,6 +777,7 @@ The following is the implementation of the `Projects` component in React:
 //Projects.jsx
 import React from "react"; // Importing React library
 import Card3 from "./Card3"; // Importing the Card3 component for displaying individual projects
+import Gym from "../images/Gym.png"
 
 // Defining the Projects component
 const Projects = () => {
@@ -778,19 +788,19 @@ const Projects = () => {
         <Card3
           title="Gym Fitness Website" // Title of the project
           description="Website for Fitness" // Description of the project
-          image="/src/images/Gym.png" // Path to the project image
+          image={Gym} // Path to the project image
           projectLink="https://arunkumar069.github.io/GymfitnessWebsite/" // Link to the live project
         />
         <Card3
           title="Gym Fitness Website" // Title of the project
           description="Website for Fitness" // Description of the project
-          image="/src/images/Gym.png" // Path to the project image
+          image={Gym} // Path to the project image
           projectLink="https://arunkumar069.github.io/GymfitnessWebsite/" // Link to the live project
         />
         <Card3
           title="Gym Fitness Website" // Title of the project
           description="Website for Fitness" // Description of the project
-          image="/src/images/Gym.png" // Path to the project image
+          image={Gym} // Path to the project image
           projectLink="https://arunkumar069.github.io/GymfitnessWebsite/" // Link to the live project
         />
       </div>
